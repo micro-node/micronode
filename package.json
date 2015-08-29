@@ -1,0 +1,15 @@
+{
+  "name": "nodes",
+  "version": "1.0.0",
+  "description": "Managed Supervised Microservice System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Haithem Bel Haj <haythem.belhaj@gmail.com> (http://haithembelhaj.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "zmq": "^2.13.0"
+  }
+}

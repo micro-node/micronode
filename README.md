@@ -1,0 +1,5 @@
+
+# Requirement
+
+- ZeroMQ 
+- NodeJS
