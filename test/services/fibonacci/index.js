@@ -1,13 +1,13 @@
 
-
 module.exports = fibonacci;
-
 
 function fibonacci(n){
 
-  if(n <= 2) return 1;
+  // avoid stack overflow with tail recursion
+  return function fib(n, a, b) {
 
-  return fibonacci(n - 1) + fibonacci(n - 2);
+    return n > 0 ? fib(n-1, b, a + b) : a;
+  }(n,0,1);
 }
 
 
