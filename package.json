@@ -9,7 +9,9 @@
   "author": "Haithem Bel Haj <haythem.belhaj@gmail.com> (http://haithembelhaj.github.io)",
   "license": "ISC",
   "dependencies": {
+    "babel": "^5.8.23",
     "lodash": "^3.10.1",
+    "node-uuid": "^1.4.3",
     "zmq": "^2.13.0"
   }
 }

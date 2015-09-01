@@ -1,8 +1,9 @@
+require("babel/register");
 
 var assert = require('assert');
 var path = require('path');
 var launcher = require('../lib/service-launcher');
-var connection = require('../lib/connection');
+var Client = require('../lib/client');
 
 describe('Service Launcher', function() {
 
@@ -10,13 +11,26 @@ describe('Service Launcher', function() {
 
     it('should launch a path', function (done) {
 
-      launcher.launchPath(path.join(__dirname, '/services/fibonacci'), function(service){
+      launcher.launchPath(path.join(__dirname, '/services/fibonacci'), function(err, service){
 
-        var client = connection.createClient(service);
+        if(err) done(err);
 
-        client([6], function(result){
+        service.bind('127.0.0.1', 5001, 5002);
 
-          assert.equal(result, 8);
+        var client = Client.create(service);
+
+        client([60], function(err, result){
+
+          if(err) done(err);
+
+          assert.equal(result, 1548008755920);
+        });
+
+        client([47], function(err, result){
+
+          if(err) done(err);
+
+          assert.equal(result, 2971215073);
           done();
         });
 
