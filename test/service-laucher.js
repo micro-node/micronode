@@ -15,6 +15,8 @@ describe('Service Launcher', function() {
 
         if(err) done(err);
 
+        console.log('workers', service.workers.map(function(w){ return w.process.pid}));
+
         service.bind('127.0.0.1', 5001, 5002);
 
         var client = Client.create(service);
