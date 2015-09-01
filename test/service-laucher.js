@@ -38,7 +38,6 @@ describe('Service Launcher', function() {
 
       });
 
-
     });
 
     it('should launch a multimethod service from path', function (done) {
