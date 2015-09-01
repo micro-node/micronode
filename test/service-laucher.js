@@ -21,14 +21,14 @@ describe('Service Launcher', function() {
 
         var client = Client.create(service);
 
-        client([40], function(err, result){
+        client(40, function(err, result){
 
           if(err) done(err);
 
           assert.equal(result, 102334155);
         });
 
-        client([47], function(err, result){
+        client(47, function(err, result){
 
           if(err) done(err);
 
@@ -55,14 +55,14 @@ describe('Service Launcher', function() {
 
         var client = Client.create(service);
 
-        client(['slow', [40]], function(err, result){
+        client.slow(40, function(err, result){
 
           if(err) done(err);
 
           assert.equal(result, 102334155);
         });
 
-        client(['fast', [47]], function(err, result){
+        client.fast(47, function(err, result){
 
           if(err) done(err);
 
