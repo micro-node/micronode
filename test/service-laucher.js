@@ -11,6 +11,8 @@ describe('Service Launcher', function() {
 
     it('should launch a single method service from path', function (done) {
 
+      this.timeout(5000);
+
       launcher.launchPath(path.join(__dirname, '/services/fibonacci/fast'), function(err, service){
 
         if(err) done(err);
