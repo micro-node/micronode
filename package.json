@@ -1,6 +1,6 @@
 {
-  "name": "nodes",
-  "version": "1.0.0",
+  "name": "micronode",
+  "version": "0.0.1",
   "description": "Managed Supervised Microservice System",
   "main": "index.js",
   "scripts": {
