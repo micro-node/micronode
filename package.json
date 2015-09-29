@@ -9,6 +9,7 @@
   "author": "Haithem Bel Haj <haythem.belhaj@gmail.com> (http://haithembelhaj.github.io)",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.4.0",
     "async": "^1.4.2",
     "babel": "^5.8.23",
     "lodash": "^3.10.1",
